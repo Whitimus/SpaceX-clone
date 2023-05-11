@@ -1,0 +1,125 @@
+*,
+*::before,
+*::after {
+    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+
+}
+
+:root {
+    --ff-gro: 'Familjen Grotesk', sans-serif;
+
+	
+
+	--fw-reg: 400;
+    --fw-semi: 600
+	--fw-bold: 700;
+
+	--clr-light: #fff;
+	--clr-dark: #000;
+	--clr-accent: #aeafaf;
+
+	--fs-h1: 3rem;
+	--fs-h2: 2.25rem;
+	--fs-h3: 1.25rem;
+	--fs-body: 1rem;
+}
+
+/* General Styles */
+
+body {
+    font-family: var(--ff-gro);
+    background: var(--clr-dark);
+    color: var(--clr-light);
+}
+
+a {
+    text-decoration: none;
+    color: var(--clr-light);
+
+}
+
+ul {
+    list-style: none;
+}
+
+/* Header */
+
+.main-header { 
+    position: fixed;
+    text-transform: uppercase;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    height: 100px;
+    padding: 0 30px;
+
+
+}
+ .logo {
+    width: 210px;
+    height: auto;
+
+
+ }
+
+ .logo img {
+    display: block;
+    width: 100%;
+    height: auto;
+ }
+
+ /* Desktop Nav Menu */
+
+ .desktop-nav {
+    display: block;
+    position: relative;
+    margin-right: 50px;
+    text-align: left;
+    padding-left: 40px;
+
+ }
+
+  .desktop-nav ul {
+    display: flex;
+  }
+  .desktop-nav-item {
+    position:relative;
+    margin-right: 20px;
+    padding-bottom: 2px ;
+
+  }
+
+  .desktop-nav-item a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: var(--clr-light);
+    transform: scaleX(0);
+    transition: transform 500ms cubic-bezier(0.47, 0, 0.5, 1);
+    transform-origin: right center;
+
+  }
+  .desktop-nav-item a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left center;
+    transition-duration: 400ms;
+  }
+  .desktop-nav__shop {
+     display: inline-block;
+     position: absolute;
+     right: 80px
+  }
+
+ 
+  
