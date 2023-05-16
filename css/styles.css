@@ -17,8 +17,8 @@
 	--clr-dark: #000;
 	--clr-accent: #aeafaf;
 
-	--fs-h1: 3rem;
-	--fs-h2: 2.25rem;
+	--fs-h1: 6rem;
+	--fs-h2: 3rem;
 	--fs-h3: 1rem;
 	--fs-body: 0.9rem;
 }
@@ -92,6 +92,7 @@ footer {
 .logo {
 	width: 210px;
 	height: auto;
+	margin-left: 20px;
 }
 
 .logo img {
@@ -291,7 +292,7 @@ footer {
 	animation-fill-mode: both;
 }
 
-.section--inner h1 {
+.section--inner h2 {
 	margin-bottom: 20px;
 	animation: fadeInUp 750ms ease-in-out 250ms;
 	animation-fill-mode: both;
@@ -359,12 +360,59 @@ a.btn {
 	stroke: #fff;
 }
 
+/* Inner Pages */
+
+.bg--falcon-9 {
+	background-image: url(../img/falcon-9.webp);
+}
+.bg--falcon__heavy {
+	background-image: url(../img/falcon-heavy.webp);
+}
+.bg--dragon {
+	background-image: url(../img/section-intro.jpg);
+}
+.section--animate {
+	animation: fadeIn 2s ease-in-out;
+}
+
+.section--inner__center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-transform: uppercase;
+	text-align: center;
+}
+.section--inner__center h1 {
+	margin-bottom: 50px;
+	animation: fadeInUp 500ms ease-in-out;
+}
+.section--inner__center p {
+	margin-bottom: 50px;
+	animation: fadeInUp 500ms ease-in-out 250ms;
+	animation-fill-mode: both;
+}
+/* Stats */
+
+.stats {
+	max-width: 960px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	text-align: center;
+	text-transform: uppercase;
+}
+.stats div span {
+	font-size: var(--fs-h1);
+}
+
 /* animation */
 
 @keyframes fadeInUp {
 	0% {
 		opacity: 0;
-		transform: translateY(140px);
+		transform: translateY(190px);
 	}
 	100% {
 		opacity: 1;
@@ -430,6 +478,10 @@ footer ul li a:hover {
 	.mobile-only {
 		display: block;
 	}
+
+	.section--inner__center h1 {
+		font-size: 75px;
+	}
 }
 
 @media (max-width: 600px) {
@@ -437,11 +489,26 @@ footer ul li a:hover {
 		bottom: 50px;
 		left: 25px;
 	}
-	.section--inner h1 {
+	.section--inner h2 {
 		font-size: var(--fs-h2);
 		font-weight: var(--fw-semi);
 		margin-bottom: 0;
 	}
+
+	.section--inner__center h1 {
+		font-size: 50px;
+	}
+
+	.section--inner__center {
+		width: 80%;
+	}
+	.stats div span {
+		font-size: var(--fs-h2);
+	}
+	.stats div h3 {
+		font-size: var(--fs-body);
+	}
+
 	a.btn {
 		margin-top: 10px;
 	}
